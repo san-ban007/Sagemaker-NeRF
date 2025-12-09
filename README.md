@@ -56,3 +56,20 @@ Remote server	2× NVIDIA A100 GPUs	~4 hours
 SageMaker	ml.g4dn.xlarge	~2 days
 
 The g4dn.xlarge instance provides significantly less GPU compute compared to A100 GPUs, resulting in much longer training times.
+
+5. Rendering a Video from the Trained NeRF
+
+Once training is complete, you can generate a rendered video using the following command:
+
+# Example Nerfstudio render command
+
+ns-render --load-config /path/to/output/config.yml --trajectory spiral --output-dir /path/to/video/
+
+
+(Replace with your actual command or insert a screenshot.)
+
+Due to GPU limitations on the SageMaker g4dn.xlarge instance, the rendered video was lower quality and shorter in length compared to the video generated on the remote A100 server.
+
+On the remote server, we were also able to set up SSH tunneling to access the Nerfstudio Web UI, which provides interactive visualization and fine-grained control over camera trajectories during rendering.
+
+In this SageMaker test environment, we did not explore building a custom web interface (e.g., a Gradio app) for real-time NeRF visualization. As a result, our ability to adjust camera paths or interact with the reconstructed scene directly inside the browser was limited.
