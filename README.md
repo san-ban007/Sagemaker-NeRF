@@ -13,7 +13,7 @@ To run the training and deployment workflows in this repository, ensure the foll
 
 - An AWS IAM configuration that supports pushing/pulling images and creating SageMaker endpoints.
 
-## Training a NeRF Model on SageMaker
+# Training a NeRF Model on SageMaker
 
 To train a NeRF model using AWS SageMaker, begin by creating a SageMaker Unified Studio compute space with GPU access. Your workspace should allow you to launch a JupyterLab console, as shown in the figure.
 
@@ -35,7 +35,7 @@ Follow the environment setup instructions here: [insert link].
 
 Once your environment is configured, start training using:
 
-# Example Nerfstudio training command
+Example Nerfstudio training command
 ns-train nerfacto --data /path/to/dataset --output-dir /path/to/output
 
 
