@@ -27,6 +27,8 @@ Upload your multi-view dataset (rendered images + transforms.json) to your SageM
 
 Ensure that the directory structure matches the expected Nerfstudio layout.
 
+![nerf dataset directory structure](images/nerf-data-dir.png)
+
 2. Set Up the Training Environment
 
 Create a new Conda environment and install Nerfstudio along with its dependencies.
