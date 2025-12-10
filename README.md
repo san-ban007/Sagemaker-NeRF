@@ -13,7 +13,7 @@ To run the training and deployment workflows in this repository, ensure the foll
 
 - An AWS IAM configuration that supports pushing/pulling images and creating SageMaker endpoints.
 
-# Training a NeRF Model on SageMaker
+## Training a NeRF Model on SageMaker
 
 To train a NeRF model using AWS SageMaker, begin by creating a SageMaker Unified Studio compute space with GPU access. Your workspace should allow you to launch a JupyterLab console, as shown in the figure.
 
@@ -23,8 +23,7 @@ All training and video-rendering steps can be performed directly from the SageMa
 
 Upload your multi-view dataset (rendered images + transforms.json) to your SageMaker environment and extract it into your home directory, for example:
 
-/home/sagemaker-user/data/
-
+/home/sagemaker-user/data/nerfstudio/processed_forabot_BN_final-large2/
 
 Ensure that the directory structure matches the expected Nerfstudio layout.
 
@@ -57,11 +56,11 @@ SageMaker	ml.g4dn.xlarge	~2 days
 
 The g4dn.xlarge instance provides significantly less GPU compute compared to A100 GPUs, resulting in much longer training times.
 
-5. Rendering a Video from the Trained NeRF
+## Rendering a Video from the Trained NeRF
 
 Once training is complete, you can generate a rendered video using the following command:
 
-# Example Nerfstudio render command
+## Example Nerfstudio render command
 
 ns-render --load-config /path/to/output/config.yml --trajectory spiral --output-dir /path/to/video/
 
