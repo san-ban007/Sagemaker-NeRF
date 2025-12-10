@@ -37,10 +37,9 @@ Follow the environment setup instructions here: [(https://docs.nerf.studio/quick
 Once your environment is configured, start training using:
 
 Example Nerfstudio training command
-ns-train nerfacto --data /path/to/dataset --output-dir /path/to/output
+ns-train nerfacto --data data/nerfstudio/Forams3D-data/home/sbaner24/nerfstudio/data/processed_forabot_BN_final-large2/ --output-dir data/nerfstudio/Forams3D-data/home/sbaner24/nerfstudio/outputs --vis tensorboard
 
-
-(Insert image or screenshot here if needed.)
+![training-nerf1](images/training-nerf1.png)
 
 3. Accessing the Trained Model
 
