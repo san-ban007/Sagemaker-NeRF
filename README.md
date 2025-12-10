@@ -46,15 +46,16 @@ ns-train nerfacto --data data/nerfstudio/Forams3D-data/home/sbaner24/nerfstudio/
 
 After training completes, the reconstructed NeRF model and its associated configuration files will be saved in:
 
-<insert output directory>
+![nerf-train-dir](images/nerf-train-dir.png)
 
 4. Training Time Comparison
 
 We benchmarked training performance on two different compute environments:
 
-Platform	Hardware	Training Time
-Remote server	2× NVIDIA A100 GPUs	~4 hours
-SageMaker	ml.g4dn.xlarge	~2 days
+| Platform        | Hardware              | Training Time |
+|-----------------|-----------------------|----------------|
+| Remote server   | 2× NVIDIA A100 GPUs   | ~4 hours       |
+| SageMaker       | `ml.g4dn.xlarge`      | ~2 days        |
 
 The g4dn.xlarge instance provides significantly less GPU compute compared to A100 GPUs, resulting in much longer training times.
 
