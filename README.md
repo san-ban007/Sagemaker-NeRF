@@ -20,7 +20,7 @@ To train a NeRF model using AWS SageMaker, begin by creating a SageMaker Unified
 All training and video-rendering steps can be performed directly from the SageMaker terminal.
 
 1. Upload the Dataset
-
+ 
 Upload your multi-view dataset (rendered images + transforms.json) to your SageMaker environment and extract it into your home directory, for example:
 
 /home/sagemaker-user/nerfstudio/data/processed_forabot_BN_final-large2/
