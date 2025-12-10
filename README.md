@@ -54,8 +54,8 @@ We benchmarked training performance on two different compute environments:
 
 | Platform        | Hardware              | Training Time |
 |-----------------|-----------------------|----------------|
-| Remote server   | 2× NVIDIA A100 GPUs   | ~4 hours       |
-| SageMaker       | `ml.g4dn.xlarge`      | ~2 days        |
+| Remote server   | 1× NVIDIA A100 GPUs   | ~4 hours       |
+| SageMaker       | `ml.g4dn.xlarge`      | ~12 hours       |
 
 The g4dn.xlarge instance provides significantly less GPU compute compared to A100 GPUs, resulting in much longer training times.
 
