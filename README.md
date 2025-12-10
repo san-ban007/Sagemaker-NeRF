@@ -23,7 +23,7 @@ All training and video-rendering steps can be performed directly from the SageMa
 
 Upload your multi-view dataset (rendered images + transforms.json) to your SageMaker environment and extract it into your home directory, for example:
 
-/home/sagemaker-user/data/nerfstudio/processed_forabot_BN_final-large2/
+/home/sagemaker-user/nerfstudio/data/processed_forabot_BN_final-large2/
 
 Ensure that the directory structure matches the expected Nerfstudio layout.
 
