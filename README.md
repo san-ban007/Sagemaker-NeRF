@@ -76,7 +76,7 @@ On the remote server, we were also able to set up SSH tunneling to access the Ne
 
 In this SageMaker test environment, we did not explore building a custom web interface (e.g., a Gradio app) for real-time NeRF visualization. As a result, our ability to adjust camera paths or interact with the reconstructed scene directly inside the browser was limited.
 
-# Containerizing a Trained NeRF Model
+## Containerizing a Trained NeRF Model
 
 In many workflows, NeRF models are trained outside AWS (e.g., on remote servers equipped with multi-GPU hardware). AWS can then be used solely for model deployment, inference, and interactive visualization of the reconstructed scene.
 
@@ -108,10 +108,4 @@ Inside the SageMaker terminal the image can be pulled from ECR and used in a dep
 
 6. Create a SageMaker Endpoint
 
-The endpoint was created using:
-
-The model.tar.gz artifact containing the trained NeRF weights and configuration, and
-
-The custom ECR container image built earlier.
-
-These resources allow SageMaker to host an inference server capable of rendering NeRF outputs.
+The endpoint was created using: model.tar.gz artifact containing the trained NeRF weights and configuration, and the custom ECR container image built earlier. These resources allow SageMaker to host an inference server capable of rendering NeRF outputs. Script for creating the Sagemaker endpoint can be found at Sagemaker-NeRF-inference.ipynb
