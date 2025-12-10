@@ -63,7 +63,7 @@ The g4dn.xlarge instance provides significantly less GPU compute compared to A10
 
 Once training is complete, you can generate a rendered video using the following command:
 
-## Example Nerfstudio render command
+Example Nerfstudio render command
 
 ns-render interpolate --load-config outputs/processed_forabot_BN_final-large2/nerfacto/2025-06-11_122746/config.yml   --output-path ~/renders/forabot_interpolate.mp4 
 
