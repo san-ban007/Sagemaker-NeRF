@@ -75,3 +75,43 @@ Due to GPU limitations on the SageMaker g4dn.xlarge instance, the rendered video
 On the remote server, we were also able to set up SSH tunneling to access the Nerfstudio Web UI, which provides interactive visualization and fine-grained control over camera trajectories during rendering.
 
 In this SageMaker test environment, we did not explore building a custom web interface (e.g., a Gradio app) for real-time NeRF visualization. As a result, our ability to adjust camera paths or interact with the reconstructed scene directly inside the browser was limited.
+
+# Containerizing a Trained NeRF Model
+
+In many workflows, NeRF models are trained outside AWS (e.g., on remote servers equipped with multi-GPU hardware). AWS can then be used solely for model deployment, inference, and interactive visualization of the reconstructed scene.
+
+In this project, we experimented with deploying a trained NeRF model (from our synthetic foraminifera dataset) using the following steps:
+
+1. Containerize the Model Environment
+
+We packaged all required dependencies, libraries, and inference scripts into a Docker image.
+This ensures a consistent runtime environment when deployed on SageMaker. Docker files used to build the container can be found in the folder docker-files/.
+
+2. Log into Amazon ECR using the AWS CLI:
+
+![docker-ps1](images/docker-ps1.png)
+
+
+3. Build the Docker Image (Local Machine)
+
+Using Docker Desktop for Windows, we built the image locally:
+
+![docker-ps2](images/docker-ps2.png)
+
+This single command builds as well as pushes the image to Amazon ECR.
+
+5. Pull the Image from ECR in SageMaker
+
+Inside the SageMaker terminal the image can be pulled from ECR and used in a deployment configuration.
+
+![ecr-pull1](images/ecr-pull1.png)
+
+6. Create a SageMaker Endpoint
+
+The endpoint was created using:
+
+The model.tar.gz artifact containing the trained NeRF weights and configuration, and
+
+The custom ECR container image built earlier.
+
+These resources allow SageMaker to host an inference server capable of rendering NeRF outputs.
