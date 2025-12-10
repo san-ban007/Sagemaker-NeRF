@@ -32,7 +32,7 @@ Ensure that the directory structure matches the expected Nerfstudio layout.
 2. Set Up the Training Environment
 
 Create a new Conda environment and install Nerfstudio along with its dependencies.
-Follow the environment setup instructions here: [insert link].
+Follow the environment setup instructions here: [(https://docs.nerf.studio/quickstart/installation.html)].
 
 Once your environment is configured, start training using:
 
