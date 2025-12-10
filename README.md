@@ -70,7 +70,7 @@ ns-render interpolate --load-config outputs/processed_forabot_BN_final-large2/ne
 ![nerf-inf1](images/nerf-inf1.png)
 
 
-Due to GPU limitations on the SageMaker g4dn.xlarge instance, the rendered video was lower quality and shorter in length compared to the video generated on the remote A100 server.
+Due to GPU limitations on the SageMaker g4dn.xlarge instance, the rendered video was lower quality and shorter in length compared to the video generated on the remote A100 server. These videos can be found inside the image folder.
 
 On the remote server, we were also able to set up SSH tunneling to access the Nerfstudio Web UI, which provides interactive visualization and fine-grained control over camera trajectories during rendering.
 
