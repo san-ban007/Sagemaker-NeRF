@@ -32,11 +32,12 @@ Ensure that the directory structure matches the expected Nerfstudio layout.
 2. Set Up the Training Environment
 
 Create a new Conda environment and install Nerfstudio along with its dependencies.
-Follow the environment setup instructions here: [(https://docs.nerf.studio/quickstart/installation.html)].
+Follow the environment setup instructions here: https://docs.nerf.studio/quickstart/installation.html
 
 Once your environment is configured, start training using:
 
 Example Nerfstudio training command
+
 ns-train nerfacto --data data/nerfstudio/Forams3D-data/home/sbaner24/nerfstudio/data/processed_forabot_BN_final-large2/ --output-dir data/nerfstudio/Forams3D-data/home/sbaner24/nerfstudio/outputs --vis tensorboard
 
 ![training-nerf1](images/training-nerf1.png)
