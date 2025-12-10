@@ -65,10 +65,10 @@ Once training is complete, you can generate a rendered video using the following
 
 ## Example Nerfstudio render command
 
-ns-render --load-config /path/to/output/config.yml --trajectory spiral --output-dir /path/to/video/
+ns-render interpolate --load-config outputs/processed_forabot_BN_final-large2/nerfacto/2025-06-11_122746/config.yml   --output-path ~/renders/forabot_interpolate.mp4 
 
+![nerf-inf1](images/nerf-inf1.png)
 
-(Replace with your actual command or insert a screenshot.)
 
 Due to GPU limitations on the SageMaker g4dn.xlarge instance, the rendered video was lower quality and shorter in length compared to the video generated on the remote A100 server.
 
